@@ -1,5 +1,6 @@
 package com.copo12d.example;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -10,7 +11,7 @@ public class ApplicationConfig {
     //If there is multiples beans with the same type in this case (MyFirstClass) spring boot will use
     //the first one it founds
     @Bean
-    //@Qualifier("bean1")
+    @Qualifier("bean1")
     public MyFirstClass myFirstClass(){
         return new MyFirstClass("First bean");
     }

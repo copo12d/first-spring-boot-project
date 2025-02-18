@@ -6,10 +6,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyFirstService {
-    //field injection is not recommended to used is always better to used constructor injection
-    @Autowired
-    @Qualifier("mySecondClass")
+
+
     private MyFirstClass myFirstClass;
+    //Dependency injection using simple methods (Not to different from constructor method).
+    @Autowired
+    public void injectDependencies(MyFirstClass myFirstClass){
+        this.myFirstClass = myFirstClass;
+    }
 
 
     public String tellAStory(){
