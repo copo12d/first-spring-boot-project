@@ -7,11 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyFirstService {
 
-
     private MyFirstClass myFirstClass;
-    //Dependency injection using simple methods (Not to different from constructor method).
+    //Setter injection used to inject dependencies using setters.
     @Autowired
-    public void injectDependencies(MyFirstClass myFirstClass){
+    public void setMyFirstClass(@Qualifier("mySecondClass") MyFirstClass myFirstClass){
         this.myFirstClass = myFirstClass;
     }
 
