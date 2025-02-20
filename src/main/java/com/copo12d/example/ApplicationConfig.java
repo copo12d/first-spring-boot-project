@@ -3,7 +3,6 @@ package com.copo12d.example;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ApplicationConfig {
@@ -25,5 +24,13 @@ public class ApplicationConfig {
     //@Primary
     public MyFirstClass myThirdClass(){
         return new MyFirstClass("third bean");
+    }
+    @Bean
+    public SMS mySMS(){
+        return new SMS();
+    }
+    @Bean
+    public Correo correo(){
+        return new Correo();
     }
 }
