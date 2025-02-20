@@ -10,8 +10,12 @@ public class ExampleApplication {
 	public static void main(String[] args) {
 		var ctx = SpringApplication.run(ExampleApplication.class, args);
 
-		MyFirstService tipo = ctx.getBean(MyFirstService.class);
-		tipo.getMetodo().mensaje();
+		MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
+		System.out.println(myFirstService.tellAStory());
+		System.out.println(myFirstService.getCustomPropertyFromAnotherFile());
+		System.out.println(myFirstService.getCustomProperty());
+		System.out.println(myFirstService.getCustomPropertyInt());
+
 
 	}
 

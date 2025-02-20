@@ -25,12 +25,5 @@ public class ApplicationConfig {
     public MyFirstClass myThirdClass(){
         return new MyFirstClass("third bean");
     }
-    @Bean
-    public SMS mySMS(){
-        return new SMS();
-    }
-    @Bean
-    public Correo correo(){
-        return new Correo();
-    }
+
 }
