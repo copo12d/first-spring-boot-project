@@ -4,9 +4,6 @@ package com.copo12d.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Collection;
-import java.util.Collections;
-
 @SpringBootApplication
 public class ExampleApplication {
 
@@ -24,12 +21,6 @@ public class ExampleApplication {
 
 	}
 
-	//@Bean
-	//We remove this Bean declaration and move it to ApplicationConfig
-	/*
-	public MyFirstClass myFirstClass(){
-		return new MyFirstClass();
-	}
-	 */
+
 
 }
