@@ -1,22 +1,33 @@
 package com.copo12d.example;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "T_STUDENT")
 public class Student {
     @Id
+    @GeneratedValue
     private Integer id;
-    @Column(name = "c_fname")
-    private String name;
-    private String lastName;
-    private String email;
-    private int age;
-    public Student(){
 
+    @Column(name = "c_fname", length = 20)
+    private String name;
+
+    private String lastName;
+
+    @Column(unique = true)
+    private String email;
+    
+    private int age;
+
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    private StudentProfile profile;
+
+
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
+
+    public Student() {
     }
 
     public Student(String name, String lastName, String email, int age) {
@@ -64,5 +75,21 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public StudentProfile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(StudentProfile profile) {
+        this.profile = profile;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }
