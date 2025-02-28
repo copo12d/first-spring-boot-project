@@ -1,5 +1,6 @@
-package com.copo12d.example;
+package com.copo12d.example.repositories;
 
+import com.copo12d.example.entities.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

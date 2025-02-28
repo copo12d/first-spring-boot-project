@@ -1,16 +1,18 @@
-package com.copo12d.example;
+package com.copo12d.example.controllers;
 
+import com.copo12d.example.entities.Student;
+import com.copo12d.example.repositories.StudentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class FirstController {
+public class StudentController {
 
     private final StudentRepository repository;
 
-    public FirstController(StudentRepository repository) {
+    public StudentController(StudentRepository repository) {
         this.repository = repository;
     }
 

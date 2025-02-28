@@ -1,5 +1,6 @@
-package com.copo12d.example;
+package com.copo12d.example.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +17,7 @@ public class Student {
 
     @Column(unique = true)
     private String email;
-    
+
     private int age;
 
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
@@ -25,6 +26,7 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "school_id")
+    @JsonBackReference
     private School school;
 
     public Student() {

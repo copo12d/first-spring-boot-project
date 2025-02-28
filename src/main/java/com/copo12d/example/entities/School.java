@@ -1,11 +1,11 @@
-package com.copo12d.example;
+package com.copo12d.example.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-
 import java.util.List;
 
 @Entity
@@ -15,6 +15,7 @@ public class School {
     private Integer id;
     private String name;
     @OneToMany(mappedBy = "school")
+    @JsonManagedReference
     private List<Student> students;
 
     public School() {

@@ -1,4 +1,4 @@
-package com.copo12d.example;
+package com.copo12d.example.entities;
 
 import jakarta.persistence.*;
 
