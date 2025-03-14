@@ -1,7 +1,7 @@
 package com.copo12d.example.controllers;
 
-import com.copo12d.example.entities.School;
-import com.copo12d.example.repositories.SchoolRepository;
+import com.copo12d.example.dto.SchoolDto;
+import com.copo12d.example.service.SchoolService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,20 +11,22 @@ import java.util.List;
 
 @RestController
 public class SchoolController {
-    private final SchoolRepository schoolRepository;
+    private final SchoolService schoolService;
 
-    public SchoolController(SchoolRepository schoolRepository) {
-        this.schoolRepository = schoolRepository;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
     //GetMethod
     @GetMapping("/school/all")
-    public List<School> getSchool() {
-        return schoolRepository.findAll();
+    public List<SchoolDto> getSchool() {
+        return schoolService.getAllSchools();
     }
-
     //PostMethod
     @PostMapping("/school")
-    public School saveSchool(@RequestBody School school) {
-        return schoolRepository.save(school);
+    public SchoolDto saveSchool(@RequestBody SchoolDto school) {
+       return schoolService.saveSchool(school);
     }
+
+
+
 }
