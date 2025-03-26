@@ -1,7 +1,5 @@
-package com.copo12d.example.service;
+package com.copo12d.example.school;
 
-import com.copo12d.example.dto.SchoolDto;
-import com.copo12d.example.entities.School;
 import org.springframework.stereotype.Service;
 
 @Service

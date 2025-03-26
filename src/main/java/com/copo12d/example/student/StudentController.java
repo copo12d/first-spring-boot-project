@@ -1,12 +1,6 @@
-package com.copo12d.example.controllers;
+package com.copo12d.example.student;
 
-import com.copo12d.example.dto.StudentDto;
-import com.copo12d.example.dto.StudentResponseDto;
-import com.copo12d.example.entities.School;
-import com.copo12d.example.entities.Student;
-import com.copo12d.example.repositories.StudentRepository;
-import com.copo12d.example.service.StudentService;
-import com.copo12d.example.service.studentMapper;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,7 +33,7 @@ public class StudentController {
 
     //POST METHODS
     @PostMapping("/student")
-    public StudentResponseDto saveStudent(@RequestBody StudentDto dto) {
+    public StudentResponseDto saveStudent(@Valid @RequestBody StudentDto dto) {
         return service.saveStudent(dto);
     }
 

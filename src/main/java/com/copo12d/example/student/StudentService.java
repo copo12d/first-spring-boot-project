@@ -1,8 +1,5 @@
-package com.copo12d.example.service;
+package com.copo12d.example.student;
 
-import com.copo12d.example.dto.StudentDto;
-import com.copo12d.example.dto.StudentResponseDto;
-import com.copo12d.example.repositories.StudentRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 

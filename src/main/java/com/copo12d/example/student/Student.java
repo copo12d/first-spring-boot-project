@@ -1,5 +1,7 @@
-package com.copo12d.example.entities;
+package com.copo12d.example.student;
 
+import com.copo12d.example.studentprofile.StudentProfile;
+import com.copo12d.example.school.School;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 

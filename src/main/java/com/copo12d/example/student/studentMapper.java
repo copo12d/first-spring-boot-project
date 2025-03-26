@@ -1,9 +1,6 @@
-package com.copo12d.example.service;
+package com.copo12d.example.student;
 
-import com.copo12d.example.dto.StudentDto;
-import com.copo12d.example.dto.StudentResponseDto;
-import com.copo12d.example.entities.School;
-import com.copo12d.example.entities.Student;
+import com.copo12d.example.school.School;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.copo12d.example.dto;
+package com.copo12d.example.school;
 
 public record SchoolDto(String name) {
 }

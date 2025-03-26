@@ -1,5 +1,6 @@
-package com.copo12d.example.entities;
+package com.copo12d.example.studentprofile;
 
+import com.copo12d.example.student.Student;
 import jakarta.persistence.*;
 
 @Entity

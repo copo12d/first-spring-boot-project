@@ -1,6 +1,7 @@
-package com.copo12d.example.entities;
+package com.copo12d.example.school;
 
 
+import com.copo12d.example.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

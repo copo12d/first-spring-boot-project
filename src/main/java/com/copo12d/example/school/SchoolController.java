@@ -1,7 +1,5 @@
-package com.copo12d.example.controllers;
+package com.copo12d.example.school;
 
-import com.copo12d.example.dto.SchoolDto;
-import com.copo12d.example.service.SchoolService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
